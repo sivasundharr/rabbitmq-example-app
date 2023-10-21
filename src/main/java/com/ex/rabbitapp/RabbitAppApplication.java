@@ -1,6 +1,5 @@
 package com.ex.rabbitapp;
 
-import com.ex.rabbitapp.config.DeclareablesConfiguration;
 import com.ex.rabbitapp.model.Receiver;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,7 +23,7 @@ public class RabbitAppApplication {
 		this.rabbitTemplate = rabbitTemplate;
 	}
 	@Bean
-	public CommandLineRunner run() throws Exception{
+	public CommandLineRunner run(){
 		return args->{
 			System.out.println("sending message...");
 
